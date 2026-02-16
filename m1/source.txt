@@ -1,0 +1,34 @@
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(9, OUTPUT); //зеленый
+  pinMode(10, OUTPUT);//синий
+  pinMode(8, OUTPUT);//красный
+}
+
+void loop() {
+  int temp;
+  int val = -40;
+  temp = ((analogRead(A0)-20)/2.04);
+  val += temp;
+  Serial.println(val);
+  if (val > 30) {
+    digitalWrite(10, LOW);
+    digitalWrite(9, LOW);
+    digitalWrite(8,HIGH );
+  } 
+  if (val < 20 )
+  {
+    digitalWrite(9, LOW);
+    digitalWrite(10, HIGH);
+    digitalWrite(8, LOW);
+  }
+  
+  if (val < 30 && val > 20)
+  {
+    digitalWrite(10, LOW);
+    digitalWrite(9, HIGH);
+    digitalWrite(8, LOW);
+  }
+
+}

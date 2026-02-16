@@ -1,0 +1,8 @@
+Датчик температуры 2
+https://www.tinkercad.com/things/kXBkUVtqahd-datchik-temperatury-2
+
+LCD 16x2 I2C
+https://www.tinkercad.com/things/lTjNwi1IlHR-lcd-16x2-i2c
+
+Heater with Arduino
+-
