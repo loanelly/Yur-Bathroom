@@ -1,0 +1,33 @@
+int T1 = 0;
+int T2 = 0;
+int T3 = 0;
+
+void setup() {
+  pinMode(5, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(A1, INPUT);
+  pinMode(A2, INPUT);
+  pinMode(A3, INPUT);
+
+}
+
+void loop() {
+  T1 = analogRead(A1);
+  T2 = analogRead(A2);
+  T3 = analogRead(A3);
+
+  
+  if ((T1 < 300) or (T2 < 300) or (T3 < 300))
+  {
+    analogWrite(3, 200);
+    analogWrite(5, 0);
+    
+  }
+  else
+  {
+    analogWrite(3, 0);
+    analogWrite(5, 200);
+    
+  }
+}
